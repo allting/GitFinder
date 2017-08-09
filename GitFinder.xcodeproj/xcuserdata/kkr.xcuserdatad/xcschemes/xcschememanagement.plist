@@ -9,6 +9,11 @@
 			<key>orderHint</key>
 			<integer>0</integer>
 		</dict>
+		<key>GitFinderSyncExtension.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>1</integer>
+		</dict>
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
@@ -23,6 +28,11 @@
 			<true/>
 		</dict>
 		<key>0F5A53561F3AEE830091DAA5</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>0F5A536C1F3AEF4B0091DAA5</key>
 		<dict>
 			<key>primary</key>
 			<true/>

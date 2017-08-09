@@ -15,6 +15,8 @@
 		0F5A53461F3AEE830091DAA5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0F5A53441F3AEE830091DAA5 /* Main.storyboard */; };
 		0F5A53511F3AEE830091DAA5 /* GitFinderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F5A53501F3AEE830091DAA5 /* GitFinderTests.swift */; };
 		0F5A535C1F3AEE830091DAA5 /* GitFinderUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F5A535B1F3AEE830091DAA5 /* GitFinderUITests.swift */; };
+		0F5A53721F3AEF4B0091DAA5 /* FinderSync.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F5A53711F3AEF4B0091DAA5 /* FinderSync.swift */; };
+		0F5A53761F3AEF4B0091DAA5 /* GitFinderSyncExtension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 0F5A536D1F3AEF4B0091DAA5 /* GitFinderSyncExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -32,7 +34,28 @@
 			remoteGlobalIDString = 0F5A53351F3AEE830091DAA5;
 			remoteInfo = GitFinder;
 		};
+		0F5A53741F3AEF4B0091DAA5 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 0F5A532E1F3AEE830091DAA5 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 0F5A536C1F3AEF4B0091DAA5;
+			remoteInfo = GitFinderSyncExtension;
+		};
 /* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		0F5A537A1F3AEF4B0091DAA5 /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				0F5A53761F3AEF4B0091DAA5 /* GitFinderSyncExtension.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		0F5A53361F3AEE830091DAA5 /* GitFinder.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GitFinder.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -49,6 +72,10 @@
 		0F5A53571F3AEE830091DAA5 /* GitFinderUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GitFinderUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		0F5A535B1F3AEE830091DAA5 /* GitFinderUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GitFinderUITests.swift; sourceTree = "<group>"; };
 		0F5A535D1F3AEE830091DAA5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0F5A536D1F3AEF4B0091DAA5 /* GitFinderSyncExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = GitFinderSyncExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		0F5A53701F3AEF4B0091DAA5 /* GitFinderSyncExtension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = GitFinderSyncExtension.entitlements; sourceTree = "<group>"; };
+		0F5A53711F3AEF4B0091DAA5 /* FinderSync.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FinderSync.swift; sourceTree = "<group>"; };
+		0F5A53731F3AEF4B0091DAA5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -73,6 +100,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		0F5A536A1F3AEF4B0091DAA5 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -82,6 +116,7 @@
 				0F5A53381F3AEE830091DAA5 /* GitFinder */,
 				0F5A534F1F3AEE830091DAA5 /* GitFinderTests */,
 				0F5A535A1F3AEE830091DAA5 /* GitFinderUITests */,
+				0F5A536E1F3AEF4B0091DAA5 /* GitFinderSyncExtension */,
 				0F5A53371F3AEE830091DAA5 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -92,6 +127,7 @@
 				0F5A53361F3AEE830091DAA5 /* GitFinder.app */,
 				0F5A534C1F3AEE830091DAA5 /* GitFinderTests.xctest */,
 				0F5A53571F3AEE830091DAA5 /* GitFinderUITests.xctest */,
+				0F5A536D1F3AEF4B0091DAA5 /* GitFinderSyncExtension.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -128,6 +164,24 @@
 			path = GitFinderUITests;
 			sourceTree = "<group>";
 		};
+		0F5A536E1F3AEF4B0091DAA5 /* GitFinderSyncExtension */ = {
+			isa = PBXGroup;
+			children = (
+				0F5A53711F3AEF4B0091DAA5 /* FinderSync.swift */,
+				0F5A53731F3AEF4B0091DAA5 /* Info.plist */,
+				0F5A536F1F3AEF4B0091DAA5 /* Supporting Files */,
+			);
+			path = GitFinderSyncExtension;
+			sourceTree = "<group>";
+		};
+		0F5A536F1F3AEF4B0091DAA5 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				0F5A53701F3AEF4B0091DAA5 /* GitFinderSyncExtension.entitlements */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -138,10 +192,12 @@
 				0F5A53321F3AEE830091DAA5 /* Sources */,
 				0F5A53331F3AEE830091DAA5 /* Frameworks */,
 				0F5A53341F3AEE830091DAA5 /* Resources */,
+				0F5A537A1F3AEF4B0091DAA5 /* Embed App Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				0F5A53751F3AEF4B0091DAA5 /* PBXTargetDependency */,
 			);
 			name = GitFinder;
 			productName = GitFinder;
@@ -184,6 +240,23 @@
 			productReference = 0F5A53571F3AEE830091DAA5 /* GitFinderUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
+		0F5A536C1F3AEF4B0091DAA5 /* GitFinderSyncExtension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 0F5A53771F3AEF4B0091DAA5 /* Build configuration list for PBXNativeTarget "GitFinderSyncExtension" */;
+			buildPhases = (
+				0F5A53691F3AEF4B0091DAA5 /* Sources */,
+				0F5A536A1F3AEF4B0091DAA5 /* Frameworks */,
+				0F5A536B1F3AEF4B0091DAA5 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = GitFinderSyncExtension;
+			productName = GitFinderSyncExtension;
+			productReference = 0F5A536D1F3AEF4B0091DAA5 /* GitFinderSyncExtension.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -210,6 +283,11 @@
 						ProvisioningStyle = Automatic;
 						TestTargetID = 0F5A53351F3AEE830091DAA5;
 					};
+					0F5A536C1F3AEF4B0091DAA5 = {
+						CreatedOnToolsVersion = 8.3.3;
+						DevelopmentTeam = 68XJ843M3P;
+						ProvisioningStyle = Automatic;
+					};
 				};
 			};
 			buildConfigurationList = 0F5A53311F3AEE830091DAA5 /* Build configuration list for PBXProject "GitFinder" */;
@@ -228,6 +306,7 @@
 				0F5A53351F3AEE830091DAA5 /* GitFinder */,
 				0F5A534B1F3AEE830091DAA5 /* GitFinderTests */,
 				0F5A53561F3AEE830091DAA5 /* GitFinderUITests */,
+				0F5A536C1F3AEF4B0091DAA5 /* GitFinderSyncExtension */,
 			);
 		};
 /* End PBXProject section */
@@ -250,6 +329,13 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		0F5A53551F3AEE830091DAA5 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0F5A536B1F3AEF4B0091DAA5 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -286,6 +372,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		0F5A53691F3AEF4B0091DAA5 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0F5A53721F3AEF4B0091DAA5 /* FinderSync.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -298,6 +392,11 @@
 			isa = PBXTargetDependency;
 			target = 0F5A53351F3AEE830091DAA5 /* GitFinder */;
 			targetProxy = 0F5A53581F3AEE830091DAA5 /* PBXContainerItemProxy */;
+		};
+		0F5A53751F3AEF4B0091DAA5 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 0F5A536C1F3AEF4B0091DAA5 /* GitFinderSyncExtension */;
+			targetProxy = 0F5A53741F3AEF4B0091DAA5 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -408,6 +507,7 @@
 		0F5A53611F3AEE830091DAA5 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = 68XJ843M3P;
@@ -422,6 +522,7 @@
 		0F5A53621F3AEE830091DAA5 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = 68XJ843M3P;
@@ -495,6 +596,36 @@
 			};
 			name = Release;
 		};
+		0F5A53781F3AEF4B0091DAA5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = GitFinderSyncExtension/GitFinderSyncExtension.entitlements;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = 68XJ843M3P;
+				INFOPLIST_FILE = GitFinderSyncExtension/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @executable_path/../../../../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.allting.GitFinder.GitFinderSyncExtension;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		0F5A53791F3AEF4B0091DAA5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = GitFinderSyncExtension/GitFinderSyncExtension.entitlements;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = 68XJ843M3P;
+				INFOPLIST_FILE = GitFinderSyncExtension/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @executable_path/../../../../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.allting.GitFinder.GitFinderSyncExtension;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -528,6 +659,14 @@
 			buildConfigurations = (
 				0F5A53671F3AEE830091DAA5 /* Debug */,
 				0F5A53681F3AEE830091DAA5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		0F5A53771F3AEF4B0091DAA5 /* Build configuration list for PBXNativeTarget "GitFinderSyncExtension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0F5A53781F3AEF4B0091DAA5 /* Debug */,
+				0F5A53791F3AEF4B0091DAA5 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 		};
