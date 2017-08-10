@@ -10,5 +10,7 @@
 #define GitFinder_Bridging_Header_h
 
 #import <SCEvents.h>
+#import <SCEvent.h>
+#import <SCConstants.h>
 
 #endif /* GitFinder_Bridging_Header_h */

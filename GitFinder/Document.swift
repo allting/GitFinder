@@ -31,7 +31,35 @@ class Document: NSPersistentDocument {
     
     fileprivate func setupFileSystemEvents() {
         let paths = NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true)
+        events.delegate = self
         events.startWatchingPaths(paths)
+        Swift.print("SCEvents:\(events)")
     }
+}
 
+extension Document : SCEventListenerProtocol {
+    func pathWatcher(_ pathWatcher:SCEvents, eventOccurred event:SCEvent){
+        Swift.print("Event:\(event)")
+        
+        let flags: SCEventFlags = event.eventFlags
+        
+        if flags.rawValue & SCEventFlags.itemIsFile.rawValue != SCEventFlags.itemIsFile.rawValue {
+            return
+        }
+        
+        if flags.rawValue & SCEventFlags.itemCreated.rawValue == SCEventFlags.itemCreated.rawValue {
+            Swift.print("SCEventStreamEventFlagItemCreated")
+            return
+        }
+
+        if flags.rawValue & SCEventFlags.itemFinderInfoMod.rawValue == SCEventFlags.itemFinderInfoMod.rawValue {
+            Swift.print("SCEventStreamEventFlagItemModified")
+            return
+        }
+
+        if flags.rawValue & SCEventFlags.itemRenamed.rawValue == SCEventFlags.itemRenamed.rawValue {
+            Swift.print("SCEventStreamEventFlagItemRemoved")
+            return
+        }
+    }
 }
