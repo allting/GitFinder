@@ -9,7 +9,8 @@
 import Cocoa
 
 class Document: NSPersistentDocument {
-
+    let events = SCEvents()
+    
     override init() {
         super.init()
         // Add your subclass-specific initialization here.
@@ -24,6 +25,13 @@ class Document: NSPersistentDocument {
         let storyboard = NSStoryboard(name: "Main", bundle: nil)
         let windowController = storyboard.instantiateController(withIdentifier: "Document Window Controller") as! NSWindowController
         self.addWindowController(windowController)
+        
+        self.setupFileSystemEvents()
+    }
+    
+    fileprivate func setupFileSystemEvents() {
+        let paths = NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true)
+        events.startWatchingPaths(paths)
     }
 
 }

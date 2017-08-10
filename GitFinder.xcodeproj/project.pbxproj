@@ -17,6 +17,8 @@
 		0F5A535C1F3AEE830091DAA5 /* GitFinderUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F5A535B1F3AEE830091DAA5 /* GitFinderUITests.swift */; };
 		0F5A53721F3AEF4B0091DAA5 /* FinderSync.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F5A53711F3AEF4B0091DAA5 /* FinderSync.swift */; };
 		0F5A53761F3AEF4B0091DAA5 /* GitFinderSyncExtension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 0F5A536D1F3AEF4B0091DAA5 /* GitFinderSyncExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		0F7CA5861F3B11A40068141D /* SCEvents.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0F5A53811F3AF7120091DAA5 /* SCEvents.framework */; };
+		0F7CA5871F3B11A40068141D /* SCEvents.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 0F5A53811F3AF7120091DAA5 /* SCEvents.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -41,6 +43,27 @@
 			remoteGlobalIDString = 0F5A536C1F3AEF4B0091DAA5;
 			remoteInfo = GitFinderSyncExtension;
 		};
+		0F5A53801F3AF7120091DAA5 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 0F5A537B1F3AF7120091DAA5 /* SCEvents.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 5F6140F31CE62AC8008B288C;
+			remoteInfo = SCEvents;
+		};
+		0F5A53821F3AF7120091DAA5 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 0F5A537B1F3AF7120091DAA5 /* SCEvents.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 5F6140FD1CE62AC8008B288C;
+			remoteInfo = SCEventsTests;
+		};
+		0F7CA5881F3B11A40068141D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 0F5A537B1F3AF7120091DAA5 /* SCEvents.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 5F6140F21CE62AC8008B288C;
+			remoteInfo = SCEvents;
+		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -53,6 +76,17 @@
 				0F5A53761F3AEF4B0091DAA5 /* GitFinderSyncExtension.appex in Embed App Extensions */,
 			);
 			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0F5A53971F3B086D0091DAA5 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				0F7CA5871F3B11A40068141D /* SCEvents.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXCopyFilesBuildPhase section */
@@ -76,6 +110,8 @@
 		0F5A53701F3AEF4B0091DAA5 /* GitFinderSyncExtension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = GitFinderSyncExtension.entitlements; sourceTree = "<group>"; };
 		0F5A53711F3AEF4B0091DAA5 /* FinderSync.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FinderSync.swift; sourceTree = "<group>"; };
 		0F5A53731F3AEF4B0091DAA5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0F5A537B1F3AF7120091DAA5 /* SCEvents.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = SCEvents.xcodeproj; path = SCEvents/SCEvents.xcodeproj; sourceTree = "<group>"; };
+		0F5A53841F3B02830091DAA5 /* GitFinder-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "GitFinder-Bridging-Header.h"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,6 +119,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0F7CA5861F3B11A40068141D /* SCEvents.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -118,6 +155,7 @@
 				0F5A535A1F3AEE830091DAA5 /* GitFinderUITests */,
 				0F5A536E1F3AEF4B0091DAA5 /* GitFinderSyncExtension */,
 				0F5A53371F3AEE830091DAA5 /* Products */,
+				0F5A537B1F3AF7120091DAA5 /* SCEvents.xcodeproj */,
 			);
 			sourceTree = "<group>";
 		};
@@ -142,6 +180,7 @@
 				0F5A53441F3AEE830091DAA5 /* Main.storyboard */,
 				0F5A53471F3AEE830091DAA5 /* Info.plist */,
 				0F5A533F1F3AEE830091DAA5 /* Document.xcdatamodeld */,
+				0F5A53841F3B02830091DAA5 /* GitFinder-Bridging-Header.h */,
 			);
 			path = GitFinder;
 			sourceTree = "<group>";
@@ -182,6 +221,15 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		0F5A537C1F3AF7120091DAA5 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				0F5A53811F3AF7120091DAA5 /* SCEvents.framework */,
+				0F5A53831F3AF7120091DAA5 /* SCEventsTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -193,11 +241,13 @@
 				0F5A53331F3AEE830091DAA5 /* Frameworks */,
 				0F5A53341F3AEE830091DAA5 /* Resources */,
 				0F5A537A1F3AEF4B0091DAA5 /* Embed App Extensions */,
+				0F5A53971F3B086D0091DAA5 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 				0F5A53751F3AEF4B0091DAA5 /* PBXTargetDependency */,
+				0F7CA5891F3B11A40068141D /* PBXTargetDependency */,
 			);
 			name = GitFinder;
 			productName = GitFinder;
@@ -301,6 +351,12 @@
 			mainGroup = 0F5A532D1F3AEE830091DAA5;
 			productRefGroup = 0F5A53371F3AEE830091DAA5 /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = 0F5A537C1F3AF7120091DAA5 /* Products */;
+					ProjectRef = 0F5A537B1F3AF7120091DAA5 /* SCEvents.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				0F5A53351F3AEE830091DAA5 /* GitFinder */,
@@ -310,6 +366,23 @@
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		0F5A53811F3AF7120091DAA5 /* SCEvents.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = SCEvents.framework;
+			remoteRef = 0F5A53801F3AF7120091DAA5 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		0F5A53831F3AF7120091DAA5 /* SCEventsTests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = SCEventsTests.xctest;
+			remoteRef = 0F5A53821F3AF7120091DAA5 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		0F5A53341F3AEE830091DAA5 /* Resources */ = {
@@ -397,6 +470,11 @@
 			isa = PBXTargetDependency;
 			target = 0F5A536C1F3AEF4B0091DAA5 /* GitFinderSyncExtension */;
 			targetProxy = 0F5A53741F3AEF4B0091DAA5 /* PBXContainerItemProxy */;
+		};
+		0F7CA5891F3B11A40068141D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = SCEvents;
+			targetProxy = 0F7CA5881F3B11A40068141D /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -511,10 +589,12 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = 68XJ843M3P;
+				HEADER_SEARCH_PATHS = "$(PROJECT_DIR)/**";
 				INFOPLIST_FILE = GitFinder/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.allting.GitFinder;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "GitFinder/GitFinder-Bridging-Header.h";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
@@ -526,10 +606,12 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = 68XJ843M3P;
+				HEADER_SEARCH_PATHS = "$(PROJECT_DIR)/**";
 				INFOPLIST_FILE = GitFinder/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.allting.GitFinder;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "GitFinder/GitFinder-Bridging-Header.h";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
@@ -607,6 +689,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.allting.GitFinder.GitFinderSyncExtension;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
@@ -622,6 +705,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.allting.GitFinder.GitFinderSyncExtension;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
@@ -645,6 +729,7 @@
 				0F5A53621F3AEE830091DAA5 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		0F5A53631F3AEE830091DAA5 /* Build configuration list for PBXNativeTarget "GitFinderTests" */ = {
 			isa = XCConfigurationList;
@@ -653,6 +738,7 @@
 				0F5A53651F3AEE830091DAA5 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		0F5A53661F3AEE830091DAA5 /* Build configuration list for PBXNativeTarget "GitFinderUITests" */ = {
 			isa = XCConfigurationList;
@@ -661,6 +747,7 @@
 				0F5A53681F3AEE830091DAA5 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		0F5A53771F3AEF4B0091DAA5 /* Build configuration list for PBXNativeTarget "GitFinderSyncExtension" */ = {
 			isa = XCConfigurationList;
@@ -669,6 +756,7 @@
 				0F5A53791F3AEF4B0091DAA5 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
